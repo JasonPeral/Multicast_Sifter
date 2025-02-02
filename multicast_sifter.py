@@ -18,7 +18,9 @@ def play_multicast_streams(streams):
             print(f"Playing: {streams[index]}")
             process = subprocess.Popen(["/Applications/VLC.app/Contents/MacOS/VLC", streams[index], "--volume=256"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
             
-            input("Press Enter to switch to the next stream...")  #We verify the stream then press enter to move to the next stream essentially adding 1 to index of the 
+            input("Press Enter to switch to the next stream...")  
+            #We verify the stream then press enter to move to the next stream essentially adding 1 to index of the Array
+            #Essentially doesnt have to be Enter our input request is just waiting for some type of actuation that is not CTRL+C
 
             index = (index + 1) % len(streams)  #Modulo for when we reach the end of the array we will loop back to the beginning of the array.
     #Only way to get out of the sifter CTRL + C as we have an enter input to sift through the stream        

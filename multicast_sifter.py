@@ -20,9 +20,9 @@ def play_multicast_streams(streams):
             
             input("Press Enter to switch to the next stream...")  
             #We verify the stream then press enter to move to the next stream essentially adding 1 to index of the Array
-            #Essentially doesnt have to be Enter our input request is just waiting for some type of actuation that is not CTRL+C
+            #Doesnt have to be Enter our input request is just waiting for some type of actuation that is not CTRL+C
 
-            index = (index + 1) % len(streams)  #Modulo for when we reach the end of the array we will loop back to the beginning of the array.
+            index = (index + 1) % len(streams)  #Modulo for when we reach the end of the array we will loop back to the beginning of the array rather than ending the process.
     #Only way to get out of the sifter CTRL + C as we have an enter input to sift through the stream        
     except KeyboardInterrupt:
         print("\nExiting...")
